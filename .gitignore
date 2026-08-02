@@ -11,3 +11,16 @@ logs/
 *.log
 .claude-replay.*
 .tmp-*
+UI/node_modules/
+UI/dist/
+UI/build/
+UI/.cache/
+UI/.env*
+UI/.vite/
+UI/vite.config.*.timestamp-*
+UI/*.tsbuildinfo
+UI/*-debug.log*
+UI/logs/
+UI/*.log
+UI/.claude-replay.*
+UI/.tmp-*

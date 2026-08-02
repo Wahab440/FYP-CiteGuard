@@ -11,15 +11,15 @@ A Vite development server is **already running** on `$PORT` (default 8443). You 
 
 ## Project Structure
 
-This is the canonical project structure. Start with task-relevant files below. Only follow imports or inspect other files when required, when a documented path is missing, or when the repository contradicts this guide.
+This is the canonical project structure. The app now lives in the `UI/` folder and the repository root holds documentation assets. Start with task-relevant files below. Only follow imports or inspect other files when required, when a documented path is missing, or when the repository contradicts this guide.
 
-- `src/main.tsx` - React entrypoint; imports `src/index.css` and mounts `src/App.tsx` into the `#root` element
-- `src/App.tsx` - Primary application component and the usual starting point for UI work
-- `src/index.css` - Global CSS entrypoint and Tailwind CSS v4 import
-- `index.html` - Vite HTML shell containing the `#root` element and loading `src/main.tsx`
-- `package.json` - Project dependencies and the Vite build, development, preview, and formatting scripts
-- `vite.config.ts` - Vite configuration with React, Tailwind CSS v4, and Figma Make plugins plus the `@` alias for `src`
-- `.mise.toml` - Toolchain versions for Node.js and pnpm
+- `UI/src/main.tsx` - React entrypoint; imports `UI/src/index.css` and mounts `UI/src/App.tsx` into the `#root` element
+- `UI/src/App.tsx` - Primary application component and the usual starting point for UI work
+- `UI/src/index.css` - Global CSS entrypoint and Tailwind CSS v4 import
+- `UI/index.html` - Vite HTML shell containing the `#root` element and loading `UI/src/main.tsx`
+- `UI/package.json` - Project dependencies and the Vite build, development, preview, and formatting scripts
+- `UI/vite.config.ts` - Vite configuration with React, Tailwind CSS v4, and Figma Make plugins plus the `@` alias for `src`
+- `UI/.mise.toml` - Toolchain versions for Node.js and pnpm
 
 ## Dependencies
 
@@ -30,9 +30,9 @@ This is the canonical project structure. Start with task-relevant files below. O
 
 ## Styling
 
-This project uses **Tailwind CSS v4** through the `@tailwindcss/vite` plugin configured in `vite.config.ts`. `src/index.css` imports Tailwind with `@import 'tailwindcss';`. Use Tailwind utility classes directly in JSX and put global CSS or Tailwind v4 theme customization in `src/index.css`. This scaffold does not need a Tailwind config file or PostCSS config.
+This project uses **Tailwind CSS v4** through the `@tailwindcss/vite` plugin configured in `UI/vite.config.ts`. `UI/src/index.css` imports Tailwind with `@import 'tailwindcss';`. Use Tailwind utility classes directly in JSX and put global CSS or Tailwind v4 theme customization in `UI/src/index.css`. This scaffold does not need a Tailwind config file or PostCSS config.
 
-`src/main.tsx` imports `src/index.css`, so global font wiring belongs in `src/index.css`. Keep CSS `@import` statements first, then add any `@font-face` rules and font-family defaults there.
+`UI/src/main.tsx` imports `UI/src/index.css`, so global font wiring belongs in `UI/src/index.css`. Keep CSS `@import` statements first, then add any `@font-face` rules and font-family defaults there.
 
 ## Code quality
 
