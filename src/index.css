@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-serif: 'Lora', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-canvas: #F5F4EF;
+  --color-ink: #161513;
+  --color-ink-2: #3A3835;
+  --color-surface: #FFFFFF;
+  --color-muted: #EDECEA;
+  --color-dim: #6B6966;
+  --color-rule: #DDDAD4;
+
+  --color-teal: #1B6A57;
+  --color-teal-pale: #E4F0EC;
+
+  --color-amber: #8A5C0A;
+  --color-amber-pale: #FEF2DC;
+
+  --color-scarlet: #B82D18;
+  --color-scarlet-pale: #FBEBE7;
+
+  --color-cobalt: #1B58A2;
+  --color-cobalt-pale: #E4EDF9;
+
+  --color-slate: #5C5A57;
+  --color-slate-pale: #F0EFEB;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: var(--color-teal-pale);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-rule);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-dim);
+}

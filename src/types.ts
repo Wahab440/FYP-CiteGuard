@@ -1,0 +1,11 @@
+export type Screen =
+  | 'login'
+  | 'upload'
+  | 'processing'
+  | 'dashboard'
+  | 'citation-detail'
+  | 'report'
+  | 'batch'
+  | 'empty-states'
+  | 'style-guide'
+  | 'components'
